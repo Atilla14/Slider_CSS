@@ -1,0 +1,90 @@
+@font-face {
+	font-family: Cabin;
+	src: url("fonts/Cabin-Bold.otf");
+}
+
+@font-face {
+	font-family: Trench;
+	src: url("fonts/trench.otf");
+}
+
+
+* {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+
+}
+
+.menu-slider {
+	height: 100%;
+	width: 100%;
+}
+
+#slide-checker {
+	display: none;
+}
+
+.menu-icon {
+	position: fixed;
+	left: 0px;
+	padding: 6px;
+	margin: 10px;
+	border: 1px solid #333;
+	border-radius: 3px;
+}
+
+.menu {
+	background-color: #333;
+	width: 150px;
+	height: 100vh;
+	position: fixed;
+	left: -150px;
+	right: 0px;
+}
+
+.menu ul {
+	list-style: none;
+	padding-top: 30px;
+}
+
+.menu li {
+	padding: 10px 0px;
+	margin-left: 40px;
+}
+
+.menu a {
+	text-decoration: none;
+	text-align:left;
+	font-family: trench;
+	font-weight: bold;
+	color: #999;
+	font-size: 18px;
+}
+
+.menu a:hover {
+	color: #fafafa;
+	font-weight: bolder;
+}
+
+#slide-checker:checked ~ .menu {
+	width: 300px;
+	right: 150px;
+	transition: all 250ms ease-in-out;
+}
+
+#slide-checker:checked ~ .menu li {
+	margin-left: 190px;
+	transition: all 250ms ease-in-out;
+}
+
+#slide-checker:checked ~ .menu-icon {
+	left: 150px;
+	transition: all 250ms ease-in-out;
+}
